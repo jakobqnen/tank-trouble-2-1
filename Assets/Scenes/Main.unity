@@ -1067,6 +1067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492d0f8c4b7f10c4eba8cb9e2434fc69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerMoveSpeed: 5
+  PlayerRotateSpeed: 4.4
   pf_player: {fileID: 5462602686526306162, guid: 0b709b4aba1392c4b94360b09fa001dd, type: 3}
   pf_maps:
   - {fileID: 8276407328714118634, guid: 06766487484f144428df02dd7982a0ce, type: 3}

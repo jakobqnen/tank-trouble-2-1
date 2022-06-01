@@ -5,21 +5,22 @@ using Photon.Pun;
 using TMPro;
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    float MoveSpeed;
-
-    [SerializeField]
-    float RotateSpeed;
+    private float MoveSpeed;
+    private float RotateSpeed;
     PhotonView photonView;
     Rigidbody2D rb_player;
-    [SerializeField]
     private BumperControl bump_front, bump_back;
-    float HorizontalInput, VerticalInput;
+    private float HorizontalInput, VerticalInput;
 
     void Start()
     {
+        MoveSpeed = PlayerReference.s_PlayerMoveSpeed;
+        RotateSpeed = PlayerReference.s_PlayerRotateSpeed;
         photonView = GetComponent<PhotonView>();
         rb_player = GetComponent<Rigidbody2D>();
+        bump_front = transform.Find("Front Bumper").GetComponent<BumperControl>();
+        bump_back = transform.Find("Back Bumper").GetComponent<BumperControl>();
+
         transform.parent = PlayerReference.s_tf_MainCanvas;
         transform.localScale = Vector2.one;
     }

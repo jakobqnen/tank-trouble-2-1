@@ -80,10 +80,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80dff7457b73d814e9e5c4a8d8735b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 5
-  RotateSpeed: 4.4
-  bump_front: {fileID: 1275020887000208394}
-  bump_back: {fileID: 8732229163186446523}
 --- !u!222 &-5701859770240472284
 CanvasRenderer:
   m_ObjectHideFlags: 0

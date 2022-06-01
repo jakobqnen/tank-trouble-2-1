@@ -20,13 +20,13 @@ public class PlayerController : MonoBehaviour
     {
         photonView = GetComponent<PhotonView>();
         rb_player = GetComponent<Rigidbody2D>();
-        transform.parent = PlayerManager.s_tf_MainCanvas;
+        transform.parent = PlayerReference.s_tf_MainCanvas;
         transform.localScale = Vector2.one;
     }
     void Update()
     {
-        PlayerManager.s_txt_InfoOne.text = transform.localScale.x.ToString() + " " + transform.localScale.y.ToString();
-        PlayerManager.s_txt_InfoTwo.text = GetComponent<RectTransform>().sizeDelta.x.ToString() + " " + GetComponent<RectTransform>().sizeDelta.y.ToString();
+        PlayerReference.s_txt_InfoOne.text = transform.localScale.x.ToString() + " " + transform.localScale.y.ToString();
+        PlayerReference.s_txt_InfoTwo.text = GetComponent<RectTransform>().sizeDelta.x.ToString() + " " + GetComponent<RectTransform>().sizeDelta.y.ToString();
         HorizontalInput = Input.GetAxisRaw("Horizontal");
         VerticalInput = Input.GetAxisRaw("Vertical");
         if (bump_front.isOnWall) VerticalInput = Mathf.Min(0, VerticalInput);

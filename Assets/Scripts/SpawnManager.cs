@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         GameObject player = PhotonNetwork.Instantiate(PlayerReference.s_pf_player.name, GetRandomValidPosition(), Quaternion.identity);
-        player.transform.parent = PlayerReference.s_tf_MainCanvas;
+
         GameObject[] maps = PlayerReference.s_pf_maps;
         Transform mapParent = PlayerReference.s_tf_MainCanvas.Find("Map").transform;
         if (mapParent.childCount != 0) return;

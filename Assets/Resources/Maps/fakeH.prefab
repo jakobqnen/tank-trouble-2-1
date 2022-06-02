@@ -4396,6 +4396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8071665194405164509}
   - component: {fileID: 4474082801561188503}
+  - component: {fileID: 5605369514732823385}
   m_Layer: 5
   m_Name: fakeH
   m_TagString: Untagged
@@ -4496,6 +4497,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &5605369514732823385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8071665194405164508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd16402587cfac349ad9f667bee9cabe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8273055260312755873
 GameObject:
   m_ObjectHideFlags: 0

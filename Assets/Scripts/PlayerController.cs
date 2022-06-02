@@ -30,7 +30,9 @@ public class PlayerController : MonoBehaviour
         transform.parent = PlayerReference.s_tf_MainCanvas;
         transform.localScale = Vector2.one;
 
-        img_Player.color = PlayerReference.s_clr_Players[PhotonNetwork.CurrentRoom.PlayerCount - 1];
+        print(pho_Player.ControllerActorNr);
+        img_Player.color = PlayerReference.s_clr_Players[pho_Player.ControllerActorNr - 1];
+
         pho_Player.RPC("UpdateTurretImage", RpcTarget.All);
     }
     void Update()

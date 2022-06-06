@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         print(pho_Player.ControllerActorNr);
         img_Player.color = PlayerReference.s_clr_Players[pho_Player.ControllerActorNr - 1];
 
-        pho_Player.RPC("UpdateTurretImage", RpcTarget.All);
+        pho_Player.RPC("UpdateTurretColor", RpcTarget.All);
     }
     void Update()
     {
@@ -43,8 +43,8 @@ public class PlayerController : MonoBehaviour
         VerticalInput = Input.GetAxisRaw("Vertical");
         if (Input.GetButtonDown("Jump") && pho_Player.IsMine)
         {
-            PowerUpIndex = (PowerUpIndex + 1) % PlayerReference.s_spr_Turrets.Length;
-            pho_Player.RPC("UpdateTurretImage", RpcTarget.All);
+            int newPowerUpIndex = (PowerUpIndex + 1) % PlayerReference.s_spr_Turrets.Length;
+            pho_Player.RPC("SetPowerUpTo", RpcTarget.All, newPowerUpIndex);
         }
         if (bump_Front.isOnWall) VerticalInput = Mathf.Min(0, VerticalInput); // Don't move forward when front is on wall
         if (bump_Back.isOnWall) VerticalInput = Mathf.Max(0, VerticalInput); // Don't move backward when back is on wall
@@ -67,9 +67,15 @@ public class PlayerController : MonoBehaviour
 
     }
     [PunRPC]
-    void UpdateTurretImage()
+    void SetPowerUpTo(int index)
+    {
+        PowerUpIndex = index;
+        img_Turret.sprite = PlayerReference.s_spr_Turrets[PowerUpIndex];
+    }
+
+    [PunRPC]
+    void UpdateTurretColor()
     {
         img_Turret.color = img_Player.color;
-        img_Turret.sprite = PlayerReference.s_spr_Turrets[PowerUpIndex];
     }
 }

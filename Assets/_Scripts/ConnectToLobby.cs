@@ -8,9 +8,7 @@ public class ConnectToLobby : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        PhotonNetwork.PhotonServerSettings.DevRegion = "";
         PhotonNetwork.ConnectUsingSettings();
-
     }
 
     public override void OnConnectedToMaster()

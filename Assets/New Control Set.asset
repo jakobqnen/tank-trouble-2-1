@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce4a3868147d1b4a89837281973ec5c, type: 3}
+  m_Name: New Control Set
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 1, a: 1}
+  keyImages: []
+  actionMap:
+    m_Name: Controls0
+    m_Id: 52d7178a-af54-476a-9304-52a154e47e5c
+    m_Asset: {fileID: 0}
+    m_Actions:
+    - m_Name: Movement
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: dd82fe66-a089-48dc-b5eb-9313cef80339
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 1
+    - m_Name: Shoot
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 1a6cbacf-ece7-4f31-9a2f-97ba26440778
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Bindings:
+    - m_Name: 2qwe
+      m_Id: 2b1957d3-38f1-422e-894c-3fbcc7199b1c
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 4
+    - m_Name: up
+      m_Id: d58b8e82-1fc1-4166-87fb-01aedf41af3b
+      m_Path: <Keyboard>/2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 57f3d8e1-ed4c-49f9-9b7c-58c7bb56c9cf
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 24d23299-a66a-47de-84d5-ac8942f066db
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 2c72d4aa-4bbd-47ba-be38-608294dadb89
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: 
+      m_Id: 55b9c078-028f-4fc9-b6cb-1a4efb5c87e5
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shoot
+      m_Flags: 0
